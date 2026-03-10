@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina Threads | Checkout</title>
+    <!-- Modern Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .checkout-form {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-family: inherit;
+        }
+    </style>
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1961169484470477');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1961169484470477&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <script>
+        window.trackPixelEvent = function (eventName, parameters) {
+            console.log(`%c[Meta Pixel Hook] %c${eventName}`, "color: #1877F2; font-weight: bold;", "color: #fff; background: #333; padding: 2px 6px; border-radius: 4px;", parameters || "");
+        };
+    </script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html" style="text-decoration: none; color: inherit;">
+                <span>Lumina</span>
+                <span class="logo-accent">Threads</span>
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="products.html" class="nav-link">Shop</a>
+        </div>
+    </nav>
+
+    <main class="products-container" style="padding-top: 100px; max-width: 600px; margin: 0 auto;">
+        <h2 class="section-title">Checkout</h2>
+        <form id="checkout-form" class="checkout-form">
+            <h3>Shipping Information</h3>
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" id="address" required>
+            </div>
+
+            <button type="button" id="save-shipping" class="cta-button"
+                style="margin-bottom:2rem; width:100%; background:#333;">Save Shipping Info</button>
+
+            <h3>Payment Information</h3>
+            <div class="form-group">
+                <label for="card">Credit Card Number (Mock)</label>
+                <input type="text" id="card" placeholder="1234 5678 9101 1121" required>
+            </div>
+
+            <button type="submit" id="complete-purchase" class="cta-button" style="width: 100%;">Complete
+                Purchase</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Lumina Threads. Demo for Meta Pixel.</p>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="shared.js"></script>
+    <script src="checkout.js"></script>
+</body>
+
+</html>
